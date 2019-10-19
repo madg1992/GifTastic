@@ -1,0 +1,21 @@
+body {
+    background-image: url(https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80);
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+header {
+    font-size: 5em;
+    color: whitesmoke;
+}
+
+hr {
+    border-radius: 8px;
+    border: 5px solid rgba(233, 209, 77, 0.774);
+    margin-top: -0.5em;
+}
+
+button + .disneyCharacter {
+    margin: 5px;
+}
+
