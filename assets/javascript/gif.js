@@ -20,6 +20,7 @@ $(function() {
   }
 
   $(document).on('click','.searchButton', function(){
+    $('#disney-view').empty();
     var disneyChar = $(this).data('name');
     var queryURL = "https://api.giphy.com/v1/gifs/search?q="+disneyChar+"&api_key=fUDAuKBG6mh5jPllypinr6PkAmcBBAkP&limit=10";
 
@@ -47,3 +48,23 @@ $(function() {
         }
     })
   })
+
+  $(document).on('click', '.searchImage', function(){
+    var state = $(this).attr('data-state');
+    // for loop to change gif from a still state to a animated state
+    if(state == 'still'){
+      $(this).attr('src',$(this).data('animated'));
+      $(this).attr('data-state','animated');
+    } else {
+      $(this).attr('src',$(this).data('still'));
+      $(this).attr('data-state','still');
+    }
+  })
+
+  $('#add-disney').on('click', function(){
+    var newSearch = $('input').eq(0).val();
+    topics.push(newSearch);
+    renderButtons(topics, 'searchButton', '#buttons-view')
+    return false; // prevents the page from reloading when search button is clicked
+  })
+

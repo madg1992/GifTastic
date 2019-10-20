@@ -15,7 +15,11 @@ hr {
     margin-top: -0.5em;
 }
 
-button + .disneyCharacter {
+button + .searchButton {
     margin: 5px;
+}
+
+.searchResult{
+    float: left;
 }
 
